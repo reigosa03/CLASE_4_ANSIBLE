@@ -1,0 +1,9 @@
+---
+- name: instalar apache 
+  hosts: localhost
+  remote_user: roxanagregorio
+  become: yes 
+  become_method: sudo
+  tasks: 
+   - name: install apache2 
+     apt: name=apache2 update_cache=yes state=latest
